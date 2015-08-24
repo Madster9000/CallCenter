@@ -1,0 +1,57 @@
+﻿.ModalBlock_Wrapper_Base
+{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    background: #52b6f9;
+    background: rgba(82,182,249,0.5);
+}
+
+.ModalBlock_Content_Base
+{
+    display: block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+
+    background-color: #efefef;
+
+    width: 600px;
+
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.ModalBlock_ContentHeader_Base
+{
+    width: 100%;
+    height: 30px;
+
+    line-height: 30px;
+
+    text-align: center;
+    color: #eeeeee;
+
+    background-color: #34495e
+}
+    .ModalBlock_ContentHeader_Base span
+    {
+        margin-left: -25px;
+        cursor: default;
+    }
+    .ModalBlock_ContentHeader_Base img
+    {
+        float: left;
+        width: 25px;
+        height: 25px;
+
+        margin: 2px 2px 2px 5px;
+    }

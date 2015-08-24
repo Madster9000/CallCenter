@@ -1,0 +1,635 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MsCrmModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ContactBase">
+          <Key>
+            <PropertyRef Name="ContactId" />
+          </Key>
+          <Property Name="ContactId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="DefaultPriceLevelId" Type="uniqueidentifier" />
+          <Property Name="CustomerSizeCode" Type="int" />
+          <Property Name="CustomerTypeCode" Type="int" />
+          <Property Name="PreferredContactMethodCode" Type="int" />
+          <Property Name="LeadSourceCode" Type="int" />
+          <Property Name="OriginatingLeadId" Type="uniqueidentifier" />
+          <Property Name="OwningBusinessUnit" Type="uniqueidentifier" />
+          <Property Name="PaymentTermsCode" Type="int" />
+          <Property Name="ShippingMethodCode" Type="int" />
+          <Property Name="ParticipatesInWorkflow" Type="bit" />
+          <Property Name="IsBackofficeCustomer" Type="bit" />
+          <Property Name="Salutation" Type="nvarchar" MaxLength="100" />
+          <Property Name="JobTitle" Type="nvarchar" MaxLength="100" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Department" Type="nvarchar" MaxLength="100" />
+          <Property Name="NickName" Type="nvarchar" MaxLength="50" />
+          <Property Name="MiddleName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Suffix" Type="nvarchar" MaxLength="10" />
+          <Property Name="YomiFirstName" Type="nvarchar" MaxLength="150" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="160" />
+          <Property Name="YomiMiddleName" Type="nvarchar" MaxLength="150" />
+          <Property Name="YomiLastName" Type="nvarchar" MaxLength="150" />
+          <Property Name="Anniversary" Type="datetime" />
+          <Property Name="BirthDate" Type="datetime" />
+          <Property Name="GovernmentId" Type="nvarchar" MaxLength="50" />
+          <Property Name="YomiFullName" Type="nvarchar" MaxLength="450" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="EmployeeId" Type="nvarchar" MaxLength="50" />
+          <Property Name="GenderCode" Type="int" />
+          <Property Name="AnnualIncome" Type="money" />
+          <Property Name="HasChildrenCode" Type="int" />
+          <Property Name="EducationCode" Type="int" />
+          <Property Name="WebSiteUrl" Type="nvarchar" MaxLength="200" />
+          <Property Name="FamilyStatusCode" Type="int" />
+          <Property Name="FtpSiteUrl" Type="nvarchar" MaxLength="200" />
+          <Property Name="EMailAddress1" Type="nvarchar" MaxLength="100" />
+          <Property Name="SpousesName" Type="nvarchar" MaxLength="100" />
+          <Property Name="AssistantName" Type="nvarchar" MaxLength="100" />
+          <Property Name="EMailAddress2" Type="nvarchar" MaxLength="100" />
+          <Property Name="AssistantPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="EMailAddress3" Type="nvarchar" MaxLength="100" />
+          <Property Name="DoNotPhone" Type="bit" />
+          <Property Name="ManagerName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ManagerPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="DoNotFax" Type="bit" />
+          <Property Name="DoNotEMail" Type="bit" />
+          <Property Name="DoNotPostalMail" Type="bit" />
+          <Property Name="DoNotBulkEMail" Type="bit" />
+          <Property Name="DoNotBulkPostalMail" Type="bit" />
+          <Property Name="AccountRoleCode" Type="int" />
+          <Property Name="TerritoryCode" Type="int" />
+          <Property Name="IsPrivate" Type="bit" />
+          <Property Name="CreditLimit" Type="money" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="CreditOnHold" Type="bit" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" />
+          <Property Name="ModifiedOn" Type="datetime" />
+          <Property Name="ModifiedBy" Type="uniqueidentifier" />
+          <Property Name="NumberOfChildren" Type="int" />
+          <Property Name="ChildrensNames" Type="nvarchar" MaxLength="255" />
+          <Property Name="VersionNumber" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="MobilePhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pager" Type="nvarchar" MaxLength="50" />
+          <Property Name="Telephone1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Telephone2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Telephone3" Type="nvarchar" MaxLength="50" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+          <Property Name="Aging30" Type="money" />
+          <Property Name="StateCode" Type="int" Nullable="false" />
+          <Property Name="Aging60" Type="money" />
+          <Property Name="StatusCode" Type="int" />
+          <Property Name="Aging90" Type="money" />
+          <Property Name="ExternalUserIdentifier" Type="nvarchar" MaxLength="50" />
+          <Property Name="DoNotSendMM" Type="bit" />
+          <Property Name="MasterId" Type="uniqueidentifier" />
+          <Property Name="PreferredEquipmentId" Type="uniqueidentifier" />
+          <Property Name="Merged" Type="bit" />
+          <Property Name="PreferredSystemUserId" Type="uniqueidentifier" />
+          <Property Name="PreferredAppointmentDayCode" Type="int" />
+          <Property Name="SubscriptionId" Type="uniqueidentifier" />
+          <Property Name="PreferredAppointmentTimeCode" Type="int" />
+          <Property Name="LastUsedInCampaign" Type="datetime" />
+          <Property Name="PreferredServiceId" Type="uniqueidentifier" />
+          <Property Name="TransactionCurrencyId" Type="uniqueidentifier" />
+          <Property Name="OverriddenCreatedOn" Type="datetime" />
+          <Property Name="ExchangeRate" Type="decimal" Precision="23" Scale="10" />
+          <Property Name="ImportSequenceNumber" Type="int" />
+          <Property Name="TimeZoneRuleVersionNumber" Type="int" />
+          <Property Name="UTCConversionTimeZoneCode" Type="int" />
+          <Property Name="AnnualIncome_Base" Type="money" />
+          <Property Name="CreditLimit_Base" Type="money" />
+          <Property Name="Aging60_Base" Type="money" />
+          <Property Name="Aging90_Base" Type="money" />
+          <Property Name="Aging30_Base" Type="money" />
+          <Property Name="OwnerId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+          <Property Name="IsAutoCreate" Type="bit" />
+          <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+          <Property Name="ParentCustomerId" Type="uniqueidentifier" />
+          <Property Name="ParentCustomerIdType" Type="int" />
+          <Property Name="ParentCustomerIdName" Type="nvarchar" MaxLength="4000" />
+          <Property Name="OwnerIdType" Type="int" Nullable="false" />
+          <Property Name="ParentCustomerIdYomiName" Type="nvarchar" MaxLength="4000" />
+        </EntityType>
+        <EntityType Name="ContactExtensionBase">
+          <Key>
+            <PropertyRef Name="ContactId" />
+          </Key>
+          <Property Name="ContactId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="New_skype" Type="nvarchar" MaxLength="100" />
+          <Property Name="New_site_fullname" Type="nvarchar" MaxLength="200" />
+          <Property Name="New_site_id" Type="int" />
+          <Property Name="New_Interes" Type="bit" />
+          <Property Name="New_problem" Type="bit" />
+          <Property Name="New_reshenie" Type="bit" />
+          <Property Name="New_neutral" Type="bit" />
+          <Property Name="MSA_eServicesAccessLevel" Type="int" />
+          <Property Name="MSA_webuser" Type="bit" />
+          <Property Name="sm_solutation" Type="int" />
+          <Property Name="new_sotrudniki" Type="uniqueidentifier" />
+          <Property Name="svk_role_dlya_podderzhki" Type="int" />
+          <Property Name="Adx_changepasswordatnextlogon" Type="bit" />
+          <Property Name="Adx_CreatedByIPAddress" Type="nvarchar" MaxLength="100" />
+          <Property Name="Adx_CreatedByUsername" Type="nvarchar" MaxLength="100" />
+          <Property Name="Adx_failedpasswordanswerattempts" Type="int" />
+          <Property Name="Adx_failedpasswordanswerattemptwindowstart" Type="datetime" />
+          <Property Name="Adx_failedpasswordattempts" Type="int" />
+          <Property Name="Adx_failedpasswordattemptwindowstart" Type="datetime" />
+          <Property Name="adx_identityprovidername" Type="nvarchar" MaxLength="100" />
+          <Property Name="Adx_InvitationCode" Type="nvarchar" MaxLength="500" />
+          <Property Name="Adx_InvitationCodeExpiryDate" Type="datetime" />
+          <Property Name="Adx_lastactivity" Type="datetime" />
+          <Property Name="Adx_lastlockedout" Type="datetime" />
+          <Property Name="Adx_lastpasswordchange" Type="datetime" />
+          <Property Name="Adx_LastSuccessfulLogon" Type="datetime" />
+          <Property Name="Adx_lockedout" Type="bit" />
+          <Property Name="Adx_LogonEnabled" Type="bit" />
+          <Property Name="Adx_ModifiedByIPAddress" Type="nvarchar" MaxLength="100" />
+          <Property Name="Adx_ModifiedByUsername" Type="nvarchar" MaxLength="100" />
+          <Property Name="Adx_OrganizationName" Type="nvarchar" MaxLength="250" />
+          <Property Name="Adx_password" Type="nvarchar" MaxLength="128" />
+          <Property Name="Adx_passwordanswer" Type="nvarchar" MaxLength="128" />
+          <Property Name="Adx_passwordformat" Type="nvarchar" MaxLength="100" />
+          <Property Name="Adx_passwordquestion" Type="nvarchar" MaxLength="256" />
+          <Property Name="Adx_passwordsalt" Type="nvarchar" MaxLength="128" />
+          <Property Name="Adx_resetpassword" Type="nvarchar" MaxLength="128" />
+          <Property Name="Adx_TimeZone" Type="int" />
+          <Property Name="Adx_username" Type="nvarchar" MaxLength="100" />
+          <Property Name="adx_systemuserid" Type="uniqueidentifier" />
+          <Property Name="msa_managingpartnerid" Type="uniqueidentifier" />
+          <Property Name="svk_project" Type="uniqueidentifier" />
+          <Property Name="iok_web_case_access_level" Type="int" />
+          <Property Name="svk_googlename" Type="nvarchar" MaxLength="200" />
+          <Property Name="iok_vkusername" Type="nvarchar" MaxLength="200" />
+          <Property Name="iok_yandexusername" Type="nvarchar" MaxLength="200" />
+          <Property Name="iok_mailruusername" Type="nvarchar" MaxLength="200" />
+          <Property Name="iok_contact_source" Type="int" />
+          <Property Name="iok_systtechusername" Type="nvarchar" MaxLength="100" />
+          <Property Name="iok_RouteNumber" Type="nvarchar" MaxLength="100" />
+          <Property Name="iok_telephoneban" Type="bit" />
+          <Property Name="new_route" Type="nvarchar" MaxLength="20" />
+          <Property Name="new_competitorContactFieldSearch" Type="uniqueidentifier" />
+          <Property Name="new_mob_tel2" Type="nvarchar" MaxLength="100" />
+          <Property Name="new_ReaderEntityContact" Type="int" />
+          <Property Name="new_doNotSendMMEntityContact" Type="int" />
+        </EntityType>
+        <Association Name="contact_master_contact">
+          <End Role="ContactBase" Type="Self.ContactBase" Multiplicity="0..1" />
+          <End Role="ContactBase1" Type="Self.ContactBase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ContactBase">
+              <PropertyRef Name="ContactId" />
+            </Principal>
+            <Dependent Role="ContactBase1">
+              <PropertyRef Name="MasterId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ContactExtensionBase_ContactBase">
+          <End Role="ContactBase" Type="Self.ContactBase" Multiplicity="1" />
+          <End Role="ContactExtensionBase" Type="Self.ContactExtensionBase" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="ContactBase">
+              <PropertyRef Name="ContactId" />
+            </Principal>
+            <Dependent Role="ContactExtensionBase">
+              <PropertyRef Name="ContactId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MsCrmModelStoreContainer">
+          <EntitySet Name="ContactBase" EntityType="Self.ContactBase" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ContactExtensionBase" EntityType="Self.ContactExtensionBase" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="contact_master_contact" Association="Self.contact_master_contact">
+            <End Role="ContactBase" EntitySet="ContactBase" />
+            <End Role="ContactBase1" EntitySet="ContactBase" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ContactExtensionBase_ContactBase" Association="Self.FK_ContactExtensionBase_ContactBase">
+            <End Role="ContactBase" EntitySet="ContactBase" />
+            <End Role="ContactExtensionBase" EntitySet="ContactExtensionBase" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MsCrmModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="MsCrmDataContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ContactBase" EntityType="MsCrmModel.ContactBase" />
+          <EntitySet Name="ContactExtensionBase" EntityType="MsCrmModel.ContactExtensionBase" />
+          <AssociationSet Name="contact_master_contact" Association="MsCrmModel.contact_master_contact">
+            <End Role="ContactBase" EntitySet="ContactBase" />
+            <End Role="ContactBase1" EntitySet="ContactBase" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ContactExtensionBase_ContactBase" Association="MsCrmModel.FK_ContactExtensionBase_ContactBase">
+            <End Role="ContactBase" EntitySet="ContactBase" />
+            <End Role="ContactExtensionBase" EntitySet="ContactExtensionBase" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ContactBase">
+          <Key>
+            <PropertyRef Name="ContactId" />
+          </Key>
+          <Property Name="ContactId" Type="Guid" Nullable="false" />
+          <Property Name="DefaultPriceLevelId" Type="Guid" />
+          <Property Name="CustomerSizeCode" Type="Int32" />
+          <Property Name="CustomerTypeCode" Type="Int32" />
+          <Property Name="PreferredContactMethodCode" Type="Int32" />
+          <Property Name="LeadSourceCode" Type="Int32" />
+          <Property Name="OriginatingLeadId" Type="Guid" />
+          <Property Name="OwningBusinessUnit" Type="Guid" />
+          <Property Name="PaymentTermsCode" Type="Int32" />
+          <Property Name="ShippingMethodCode" Type="Int32" />
+          <Property Name="ParticipatesInWorkflow" Type="Boolean" />
+          <Property Name="IsBackofficeCustomer" Type="Boolean" />
+          <Property Name="Salutation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="JobTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Department" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NickName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Suffix" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="YomiFirstName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="FullName" Type="String" MaxLength="160" FixedLength="false" Unicode="true" />
+          <Property Name="YomiMiddleName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="YomiLastName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Anniversary" Type="DateTime" Precision="3" />
+          <Property Name="BirthDate" Type="DateTime" Precision="3" />
+          <Property Name="GovernmentId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="YomiFullName" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EmployeeId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GenderCode" Type="Int32" />
+          <Property Name="AnnualIncome" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="HasChildrenCode" Type="Int32" />
+          <Property Name="EducationCode" Type="Int32" />
+          <Property Name="WebSiteUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="FamilyStatusCode" Type="Int32" />
+          <Property Name="FtpSiteUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="EMailAddress1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SpousesName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AssistantName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="EMailAddress2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AssistantPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EMailAddress3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DoNotPhone" Type="Boolean" />
+          <Property Name="ManagerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ManagerPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DoNotFax" Type="Boolean" />
+          <Property Name="DoNotEMail" Type="Boolean" />
+          <Property Name="DoNotPostalMail" Type="Boolean" />
+          <Property Name="DoNotBulkEMail" Type="Boolean" />
+          <Property Name="DoNotBulkPostalMail" Type="Boolean" />
+          <Property Name="AccountRoleCode" Type="Int32" />
+          <Property Name="TerritoryCode" Type="Int32" />
+          <Property Name="IsPrivate" Type="Boolean" />
+          <Property Name="CreditLimit" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="CreditOnHold" Type="Boolean" />
+          <Property Name="CreatedBy" Type="Guid" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="Guid" />
+          <Property Name="NumberOfChildren" Type="Int32" />
+          <Property Name="ChildrensNames" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="VersionNumber" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="MobilePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pager" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Telephone1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Telephone2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Telephone3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Aging30" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="StateCode" Type="Int32" Nullable="false" />
+          <Property Name="Aging60" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="StatusCode" Type="Int32" />
+          <Property Name="Aging90" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="ExternalUserIdentifier" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DoNotSendMM" Type="Boolean" />
+          <Property Name="MasterId" Type="Guid" />
+          <Property Name="PreferredEquipmentId" Type="Guid" />
+          <Property Name="Merged" Type="Boolean" />
+          <Property Name="PreferredSystemUserId" Type="Guid" />
+          <Property Name="PreferredAppointmentDayCode" Type="Int32" />
+          <Property Name="SubscriptionId" Type="Guid" />
+          <Property Name="PreferredAppointmentTimeCode" Type="Int32" />
+          <Property Name="LastUsedInCampaign" Type="DateTime" Precision="3" />
+          <Property Name="PreferredServiceId" Type="Guid" />
+          <Property Name="TransactionCurrencyId" Type="Guid" />
+          <Property Name="OverriddenCreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="ExchangeRate" Type="Decimal" Precision="23" Scale="10" />
+          <Property Name="ImportSequenceNumber" Type="Int32" />
+          <Property Name="TimeZoneRuleVersionNumber" Type="Int32" />
+          <Property Name="UTCConversionTimeZoneCode" Type="Int32" />
+          <Property Name="AnnualIncome_Base" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="CreditLimit_Base" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Aging60_Base" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Aging90_Base" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Aging30_Base" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="OwnerId" Type="Guid" Nullable="false" />
+          <Property Name="CreatedOnBehalfBy" Type="Guid" />
+          <Property Name="IsAutoCreate" Type="Boolean" />
+          <Property Name="ModifiedOnBehalfBy" Type="Guid" />
+          <Property Name="ParentCustomerId" Type="Guid" />
+          <Property Name="ParentCustomerIdType" Type="Int32" />
+          <Property Name="ParentCustomerIdName" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="OwnerIdType" Type="Int32" Nullable="false" />
+          <Property Name="ParentCustomerIdYomiName" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ContactBase1" Relationship="MsCrmModel.contact_master_contact" FromRole="ContactBase" ToRole="ContactBase1" />
+          <NavigationProperty Name="ContactBase2" Relationship="MsCrmModel.contact_master_contact" FromRole="ContactBase1" ToRole="ContactBase" />
+          <NavigationProperty Name="ContactExtensionBase" Relationship="MsCrmModel.FK_ContactExtensionBase_ContactBase" FromRole="ContactBase" ToRole="ContactExtensionBase" />
+        </EntityType>
+        <EntityType Name="ContactExtensionBase">
+          <Key>
+            <PropertyRef Name="ContactId" />
+          </Key>
+          <Property Name="ContactId" Type="Guid" Nullable="false" />
+          <Property Name="New_skype" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="New_site_fullname" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="New_site_id" Type="Int32" />
+          <Property Name="New_Interes" Type="Boolean" />
+          <Property Name="New_problem" Type="Boolean" />
+          <Property Name="New_reshenie" Type="Boolean" />
+          <Property Name="New_neutral" Type="Boolean" />
+          <Property Name="MSA_eServicesAccessLevel" Type="Int32" />
+          <Property Name="MSA_webuser" Type="Boolean" />
+          <Property Name="sm_solutation" Type="Int32" />
+          <Property Name="new_sotrudniki" Type="Guid" />
+          <Property Name="svk_role_dlya_podderzhki" Type="Int32" />
+          <Property Name="Adx_changepasswordatnextlogon" Type="Boolean" />
+          <Property Name="Adx_CreatedByIPAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Adx_CreatedByUsername" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Adx_failedpasswordanswerattempts" Type="Int32" />
+          <Property Name="Adx_failedpasswordanswerattemptwindowstart" Type="DateTime" Precision="3" />
+          <Property Name="Adx_failedpasswordattempts" Type="Int32" />
+          <Property Name="Adx_failedpasswordattemptwindowstart" Type="DateTime" Precision="3" />
+          <Property Name="adx_identityprovidername" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Adx_InvitationCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Adx_InvitationCodeExpiryDate" Type="DateTime" Precision="3" />
+          <Property Name="Adx_lastactivity" Type="DateTime" Precision="3" />
+          <Property Name="Adx_lastlockedout" Type="DateTime" Precision="3" />
+          <Property Name="Adx_lastpasswordchange" Type="DateTime" Precision="3" />
+          <Property Name="Adx_LastSuccessfulLogon" Type="DateTime" Precision="3" />
+          <Property Name="Adx_lockedout" Type="Boolean" />
+          <Property Name="Adx_LogonEnabled" Type="Boolean" />
+          <Property Name="Adx_ModifiedByIPAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Adx_ModifiedByUsername" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Adx_OrganizationName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Adx_password" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Adx_passwordanswer" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Adx_passwordformat" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Adx_passwordquestion" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Adx_passwordsalt" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Adx_resetpassword" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Adx_TimeZone" Type="Int32" />
+          <Property Name="Adx_username" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="adx_systemuserid" Type="Guid" />
+          <Property Name="msa_managingpartnerid" Type="Guid" />
+          <Property Name="svk_project" Type="Guid" />
+          <Property Name="iok_web_case_access_level" Type="Int32" />
+          <Property Name="svk_googlename" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="iok_vkusername" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="iok_yandexusername" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="iok_mailruusername" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="iok_contact_source" Type="Int32" />
+          <Property Name="iok_systtechusername" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="iok_RouteNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="iok_telephoneban" Type="Boolean" />
+          <Property Name="new_route" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="new_competitorContactFieldSearch" Type="Guid" />
+          <Property Name="new_mob_tel2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="new_ReaderEntityContact" Type="Int32" />
+          <Property Name="new_doNotSendMMEntityContact" Type="Int32" />
+          <NavigationProperty Name="ContactBase" Relationship="MsCrmModel.FK_ContactExtensionBase_ContactBase" FromRole="ContactExtensionBase" ToRole="ContactBase" />
+        </EntityType>
+        <Association Name="contact_master_contact">
+          <End Type="MsCrmModel.ContactBase" Role="ContactBase" Multiplicity="0..1" />
+          <End Type="MsCrmModel.ContactBase" Role="ContactBase1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ContactBase">
+              <PropertyRef Name="ContactId" />
+            </Principal>
+            <Dependent Role="ContactBase1">
+              <PropertyRef Name="MasterId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ContactExtensionBase_ContactBase">
+          <End Type="MsCrmModel.ContactBase" Role="ContactBase" Multiplicity="1" />
+          <End Type="MsCrmModel.ContactExtensionBase" Role="ContactExtensionBase" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="ContactBase">
+              <PropertyRef Name="ContactId" />
+            </Principal>
+            <Dependent Role="ContactExtensionBase">
+              <PropertyRef Name="ContactId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MsCrmModelStoreContainer" CdmEntityContainer="MsCrmDataContext">
+          <EntitySetMapping Name="ContactBase">
+            <EntityTypeMapping TypeName="MsCrmModel.ContactBase">
+              <MappingFragment StoreEntitySet="ContactBase">
+                <ScalarProperty Name="ParentCustomerIdYomiName" ColumnName="ParentCustomerIdYomiName" />
+                <ScalarProperty Name="OwnerIdType" ColumnName="OwnerIdType" />
+                <ScalarProperty Name="ParentCustomerIdName" ColumnName="ParentCustomerIdName" />
+                <ScalarProperty Name="ParentCustomerIdType" ColumnName="ParentCustomerIdType" />
+                <ScalarProperty Name="ParentCustomerId" ColumnName="ParentCustomerId" />
+                <ScalarProperty Name="ModifiedOnBehalfBy" ColumnName="ModifiedOnBehalfBy" />
+                <ScalarProperty Name="IsAutoCreate" ColumnName="IsAutoCreate" />
+                <ScalarProperty Name="CreatedOnBehalfBy" ColumnName="CreatedOnBehalfBy" />
+                <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+                <ScalarProperty Name="Aging30_Base" ColumnName="Aging30_Base" />
+                <ScalarProperty Name="Aging90_Base" ColumnName="Aging90_Base" />
+                <ScalarProperty Name="Aging60_Base" ColumnName="Aging60_Base" />
+                <ScalarProperty Name="CreditLimit_Base" ColumnName="CreditLimit_Base" />
+                <ScalarProperty Name="AnnualIncome_Base" ColumnName="AnnualIncome_Base" />
+                <ScalarProperty Name="UTCConversionTimeZoneCode" ColumnName="UTCConversionTimeZoneCode" />
+                <ScalarProperty Name="TimeZoneRuleVersionNumber" ColumnName="TimeZoneRuleVersionNumber" />
+                <ScalarProperty Name="ImportSequenceNumber" ColumnName="ImportSequenceNumber" />
+                <ScalarProperty Name="ExchangeRate" ColumnName="ExchangeRate" />
+                <ScalarProperty Name="OverriddenCreatedOn" ColumnName="OverriddenCreatedOn" />
+                <ScalarProperty Name="TransactionCurrencyId" ColumnName="TransactionCurrencyId" />
+                <ScalarProperty Name="PreferredServiceId" ColumnName="PreferredServiceId" />
+                <ScalarProperty Name="LastUsedInCampaign" ColumnName="LastUsedInCampaign" />
+                <ScalarProperty Name="PreferredAppointmentTimeCode" ColumnName="PreferredAppointmentTimeCode" />
+                <ScalarProperty Name="SubscriptionId" ColumnName="SubscriptionId" />
+                <ScalarProperty Name="PreferredAppointmentDayCode" ColumnName="PreferredAppointmentDayCode" />
+                <ScalarProperty Name="PreferredSystemUserId" ColumnName="PreferredSystemUserId" />
+                <ScalarProperty Name="Merged" ColumnName="Merged" />
+                <ScalarProperty Name="PreferredEquipmentId" ColumnName="PreferredEquipmentId" />
+                <ScalarProperty Name="MasterId" ColumnName="MasterId" />
+                <ScalarProperty Name="DoNotSendMM" ColumnName="DoNotSendMM" />
+                <ScalarProperty Name="ExternalUserIdentifier" ColumnName="ExternalUserIdentifier" />
+                <ScalarProperty Name="Aging90" ColumnName="Aging90" />
+                <ScalarProperty Name="StatusCode" ColumnName="StatusCode" />
+                <ScalarProperty Name="Aging60" ColumnName="Aging60" />
+                <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+                <ScalarProperty Name="Aging30" ColumnName="Aging30" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Telephone3" ColumnName="Telephone3" />
+                <ScalarProperty Name="Telephone2" ColumnName="Telephone2" />
+                <ScalarProperty Name="Telephone1" ColumnName="Telephone1" />
+                <ScalarProperty Name="Pager" ColumnName="Pager" />
+                <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+                <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+                <ScalarProperty Name="ChildrensNames" ColumnName="ChildrensNames" />
+                <ScalarProperty Name="NumberOfChildren" ColumnName="NumberOfChildren" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreditOnHold" ColumnName="CreditOnHold" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreditLimit" ColumnName="CreditLimit" />
+                <ScalarProperty Name="IsPrivate" ColumnName="IsPrivate" />
+                <ScalarProperty Name="TerritoryCode" ColumnName="TerritoryCode" />
+                <ScalarProperty Name="AccountRoleCode" ColumnName="AccountRoleCode" />
+                <ScalarProperty Name="DoNotBulkPostalMail" ColumnName="DoNotBulkPostalMail" />
+                <ScalarProperty Name="DoNotBulkEMail" ColumnName="DoNotBulkEMail" />
+                <ScalarProperty Name="DoNotPostalMail" ColumnName="DoNotPostalMail" />
+                <ScalarProperty Name="DoNotEMail" ColumnName="DoNotEMail" />
+                <ScalarProperty Name="DoNotFax" ColumnName="DoNotFax" />
+                <ScalarProperty Name="ManagerPhone" ColumnName="ManagerPhone" />
+                <ScalarProperty Name="ManagerName" ColumnName="ManagerName" />
+                <ScalarProperty Name="DoNotPhone" ColumnName="DoNotPhone" />
+                <ScalarProperty Name="EMailAddress3" ColumnName="EMailAddress3" />
+                <ScalarProperty Name="AssistantPhone" ColumnName="AssistantPhone" />
+                <ScalarProperty Name="EMailAddress2" ColumnName="EMailAddress2" />
+                <ScalarProperty Name="AssistantName" ColumnName="AssistantName" />
+                <ScalarProperty Name="SpousesName" ColumnName="SpousesName" />
+                <ScalarProperty Name="EMailAddress1" ColumnName="EMailAddress1" />
+                <ScalarProperty Name="FtpSiteUrl" ColumnName="FtpSiteUrl" />
+                <ScalarProperty Name="FamilyStatusCode" ColumnName="FamilyStatusCode" />
+                <ScalarProperty Name="WebSiteUrl" ColumnName="WebSiteUrl" />
+                <ScalarProperty Name="EducationCode" ColumnName="EducationCode" />
+                <ScalarProperty Name="HasChildrenCode" ColumnName="HasChildrenCode" />
+                <ScalarProperty Name="AnnualIncome" ColumnName="AnnualIncome" />
+                <ScalarProperty Name="GenderCode" ColumnName="GenderCode" />
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="YomiFullName" ColumnName="YomiFullName" />
+                <ScalarProperty Name="GovernmentId" ColumnName="GovernmentId" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="Anniversary" ColumnName="Anniversary" />
+                <ScalarProperty Name="YomiLastName" ColumnName="YomiLastName" />
+                <ScalarProperty Name="YomiMiddleName" ColumnName="YomiMiddleName" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="YomiFirstName" ColumnName="YomiFirstName" />
+                <ScalarProperty Name="Suffix" ColumnName="Suffix" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="NickName" ColumnName="NickName" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+                <ScalarProperty Name="Salutation" ColumnName="Salutation" />
+                <ScalarProperty Name="IsBackofficeCustomer" ColumnName="IsBackofficeCustomer" />
+                <ScalarProperty Name="ParticipatesInWorkflow" ColumnName="ParticipatesInWorkflow" />
+                <ScalarProperty Name="ShippingMethodCode" ColumnName="ShippingMethodCode" />
+                <ScalarProperty Name="PaymentTermsCode" ColumnName="PaymentTermsCode" />
+                <ScalarProperty Name="OwningBusinessUnit" ColumnName="OwningBusinessUnit" />
+                <ScalarProperty Name="OriginatingLeadId" ColumnName="OriginatingLeadId" />
+                <ScalarProperty Name="LeadSourceCode" ColumnName="LeadSourceCode" />
+                <ScalarProperty Name="PreferredContactMethodCode" ColumnName="PreferredContactMethodCode" />
+                <ScalarProperty Name="CustomerTypeCode" ColumnName="CustomerTypeCode" />
+                <ScalarProperty Name="CustomerSizeCode" ColumnName="CustomerSizeCode" />
+                <ScalarProperty Name="DefaultPriceLevelId" ColumnName="DefaultPriceLevelId" />
+                <ScalarProperty Name="ContactId" ColumnName="ContactId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ContactExtensionBase">
+            <EntityTypeMapping TypeName="MsCrmModel.ContactExtensionBase">
+              <MappingFragment StoreEntitySet="ContactExtensionBase">
+                <ScalarProperty Name="new_doNotSendMMEntityContact" ColumnName="new_doNotSendMMEntityContact" />
+                <ScalarProperty Name="new_ReaderEntityContact" ColumnName="new_ReaderEntityContact" />
+                <ScalarProperty Name="new_mob_tel2" ColumnName="new_mob_tel2" />
+                <ScalarProperty Name="new_competitorContactFieldSearch" ColumnName="new_competitorContactFieldSearch" />
+                <ScalarProperty Name="new_route" ColumnName="new_route" />
+                <ScalarProperty Name="iok_telephoneban" ColumnName="iok_telephoneban" />
+                <ScalarProperty Name="iok_RouteNumber" ColumnName="iok_RouteNumber" />
+                <ScalarProperty Name="iok_systtechusername" ColumnName="iok_systtechusername" />
+                <ScalarProperty Name="iok_contact_source" ColumnName="iok_contact_source" />
+                <ScalarProperty Name="iok_mailruusername" ColumnName="iok_mailruusername" />
+                <ScalarProperty Name="iok_yandexusername" ColumnName="iok_yandexusername" />
+                <ScalarProperty Name="iok_vkusername" ColumnName="iok_vkusername" />
+                <ScalarProperty Name="svk_googlename" ColumnName="svk_googlename" />
+                <ScalarProperty Name="iok_web_case_access_level" ColumnName="iok_web_case_access_level" />
+                <ScalarProperty Name="svk_project" ColumnName="svk_project" />
+                <ScalarProperty Name="msa_managingpartnerid" ColumnName="msa_managingpartnerid" />
+                <ScalarProperty Name="adx_systemuserid" ColumnName="adx_systemuserid" />
+                <ScalarProperty Name="Adx_username" ColumnName="Adx_username" />
+                <ScalarProperty Name="Adx_TimeZone" ColumnName="Adx_TimeZone" />
+                <ScalarProperty Name="Adx_resetpassword" ColumnName="Adx_resetpassword" />
+                <ScalarProperty Name="Adx_passwordsalt" ColumnName="Adx_passwordsalt" />
+                <ScalarProperty Name="Adx_passwordquestion" ColumnName="Adx_passwordquestion" />
+                <ScalarProperty Name="Adx_passwordformat" ColumnName="Adx_passwordformat" />
+                <ScalarProperty Name="Adx_passwordanswer" ColumnName="Adx_passwordanswer" />
+                <ScalarProperty Name="Adx_password" ColumnName="Adx_password" />
+                <ScalarProperty Name="Adx_OrganizationName" ColumnName="Adx_OrganizationName" />
+                <ScalarProperty Name="Adx_ModifiedByUsername" ColumnName="Adx_ModifiedByUsername" />
+                <ScalarProperty Name="Adx_ModifiedByIPAddress" ColumnName="Adx_ModifiedByIPAddress" />
+                <ScalarProperty Name="Adx_LogonEnabled" ColumnName="Adx_LogonEnabled" />
+                <ScalarProperty Name="Adx_lockedout" ColumnName="Adx_lockedout" />
+                <ScalarProperty Name="Adx_LastSuccessfulLogon" ColumnName="Adx_LastSuccessfulLogon" />
+                <ScalarProperty Name="Adx_lastpasswordchange" ColumnName="Adx_lastpasswordchange" />
+                <ScalarProperty Name="Adx_lastlockedout" ColumnName="Adx_lastlockedout" />
+                <ScalarProperty Name="Adx_lastactivity" ColumnName="Adx_lastactivity" />
+                <ScalarProperty Name="Adx_InvitationCodeExpiryDate" ColumnName="Adx_InvitationCodeExpiryDate" />
+                <ScalarProperty Name="Adx_InvitationCode" ColumnName="Adx_InvitationCode" />
+                <ScalarProperty Name="adx_identityprovidername" ColumnName="adx_identityprovidername" />
+                <ScalarProperty Name="Adx_failedpasswordattemptwindowstart" ColumnName="Adx_failedpasswordattemptwindowstart" />
+                <ScalarProperty Name="Adx_failedpasswordattempts" ColumnName="Adx_failedpasswordattempts" />
+                <ScalarProperty Name="Adx_failedpasswordanswerattemptwindowstart" ColumnName="Adx_failedpasswordanswerattemptwindowstart" />
+                <ScalarProperty Name="Adx_failedpasswordanswerattempts" ColumnName="Adx_failedpasswordanswerattempts" />
+                <ScalarProperty Name="Adx_CreatedByUsername" ColumnName="Adx_CreatedByUsername" />
+                <ScalarProperty Name="Adx_CreatedByIPAddress" ColumnName="Adx_CreatedByIPAddress" />
+                <ScalarProperty Name="Adx_changepasswordatnextlogon" ColumnName="Adx_changepasswordatnextlogon" />
+                <ScalarProperty Name="svk_role_dlya_podderzhki" ColumnName="svk_role_dlya_podderzhki" />
+                <ScalarProperty Name="new_sotrudniki" ColumnName="new_sotrudniki" />
+                <ScalarProperty Name="sm_solutation" ColumnName="sm_solutation" />
+                <ScalarProperty Name="MSA_webuser" ColumnName="MSA_webuser" />
+                <ScalarProperty Name="MSA_eServicesAccessLevel" ColumnName="MSA_eServicesAccessLevel" />
+                <ScalarProperty Name="New_neutral" ColumnName="New_neutral" />
+                <ScalarProperty Name="New_reshenie" ColumnName="New_reshenie" />
+                <ScalarProperty Name="New_problem" ColumnName="New_problem" />
+                <ScalarProperty Name="New_Interes" ColumnName="New_Interes" />
+                <ScalarProperty Name="New_site_id" ColumnName="New_site_id" />
+                <ScalarProperty Name="New_site_fullname" ColumnName="New_site_fullname" />
+                <ScalarProperty Name="New_skype" ColumnName="New_skype" />
+                <ScalarProperty Name="ContactId" ColumnName="ContactId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

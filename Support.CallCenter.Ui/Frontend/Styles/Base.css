@@ -1,0 +1,81 @@
+﻿body,html 
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    font-size: 18px;
+
+    background-color: lavender;
+}
+
+.PageWrapper
+{
+    width: 1000px;
+    height: 100%;
+
+    margin: 0 auto;
+    /*border: 1px solid green;*/
+}
+
+.Header
+{
+    width: 100%;
+    height: 85px;
+
+    background-color:#093d62;
+}
+
+.Content
+{
+    width: 100%;
+    min-height: 600px;
+
+    background-color: white;
+}
+
+.ShadowBase
+{
+    -webkit-box-shadow: 0 0 0px #000000;
+    -ms-box-shadow: 0 0 0px #000000;
+    box-shadow: 2px 2px 2px #555555;
+    /*box-shadow: 0 0 10px rgba(0,0,0,0.5);*/
+}
+
+.HasHint
+{
+    position: relative;
+}
+.HasHint:hover::after
+{
+    content: attr(data-title);
+
+    display: block;
+    position: absolute;
+
+    width: 200px;
+    height: 30px;
+    left: -85px; bottom: -45px; 
+
+    z-index: 1;
+
+    background: #3498db;
+    background: rgba(82,182,249,0.9);
+
+    font-size: 12px;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+
+    padding: 5px 5px 5px 5px;
+}
+
+.clearfix:after {
+	content: " ";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}

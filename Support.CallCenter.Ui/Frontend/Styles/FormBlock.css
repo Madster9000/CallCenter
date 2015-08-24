@@ -1,0 +1,79 @@
+﻿.FormBlock_Form_Base
+{
+    margin: 5px 5px 5px 5px;
+}
+    .FormBlock_Button_Base
+    {
+        border: 1px solid #888888;
+        width: 49%;
+        height: 30px;
+        color: white;
+        float: left;
+
+        margin: 10px 0px 10px 0;
+
+        cursor: pointer;
+    }
+        .FormBlock_Button_Small
+        {
+            width: 29%;
+        }
+        .FormBlock_Button_Green
+        {
+            background-color: #1abc9c;
+            margin-right: 5px
+        }
+        .FormBlock_Button_Blue
+        {
+            background-color: #34495e;
+        }
+        .FormBlock_Button_Base:last-of-type
+        {
+            float: right;
+        }
+        .FormBlock_Button_Small:last-of-type
+        {
+            margin-right: 0;
+        }
+
+    .FormBlock_Field_Base
+    {
+        color: #555555;
+        margin: 5px 0px 5px 0px;
+    }
+        .FormBlock_Field_Base label
+        {
+            display: block;
+        }
+        .FormBlock_Field_Base input[type=text]
+        {
+            border: 1px solid #888888;
+            color: #555555;
+            width: 99%;
+            height: 20px;
+
+            padding: 2px;
+        }
+        .FormBlock_Field_Base textarea
+        {
+            -moz-resize: none;
+            -ms-resize: none;
+            -o-resize: none;
+            resize: none;
+
+            border: 1px solid #888888;
+            color: #555555;
+            width: 99%;
+            height: 100px;
+
+            padding: 2px;
+        }
+        .FormBlock_Field_Base select
+        {
+            border: 1px solid #888888;
+            color: #555555;
+            width: 100%;
+            height: 25px;
+
+            padding: 2px;
+        }

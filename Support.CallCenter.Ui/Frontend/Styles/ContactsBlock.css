@@ -1,0 +1,32 @@
+﻿.ContactsBlock_Contaner_Base
+{
+    margin: 5px;
+
+    height: 300px;
+}
+    .ContactsBlock_Wrapper_Base
+    {
+        display: block;
+        width: 95%;
+        border: 1px solid #aaaaaa;
+        background-color:  #3498db;
+        color: white;
+
+        margin: 3px;
+        padding: 3px;
+        cursor: pointer;
+
+        height: 30px;
+        line-height: 30px;
+    }
+    .ContactBlock_Pages_Base
+    {
+        text-align: center;
+    }
+        .ContactBlock_Pages_Base img
+        {
+            width: 25px;
+            height: 25px;
+            margin: 5px;
+            cursor: pointer;
+        }

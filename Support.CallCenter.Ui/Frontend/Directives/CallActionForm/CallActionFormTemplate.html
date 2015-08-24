@@ -1,0 +1,20 @@
+﻿<div class="ModalBlock_Wrapper_Base" data-ng-show="CallActionModal.IsVisible">
+    <div class="ModalBlock_Content_Base">
+        <div class="ModalBlock_ContentHeader_Base">
+            <img src="/Images/ic_description_white_48dp.png" />
+            <span>Создать действие по звонку</span>
+        </div>
+
+        <form class="FormBlock_Form_Base clearfix">
+            <div class="FormBlock_Field_Base">
+                <label for="IncidentDescription">Описание:</label>
+                <textarea id="IncidentDescription" data-ng-model="CallActionFormViewModel.Description"></textarea>
+            </div>
+
+
+            <input class="FormBlock_Button_Base FormBlock_Button_Green" type="submit" value="Создать" data-ng-click="CallActionFormEvents.CreateButtonClicked()" />
+            <input class="FormBlock_Button_Base FormBlock_Button_Blue" type="button" value="Отмена" data-ng-click="CallActionModal.Hide()" />
+
+        </form>
+    </div>
+</div>

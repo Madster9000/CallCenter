@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="126bf4c801834e4ebcd7c35a713bece1" Name="Diagram1" ZoomLevel="10">
+        <EntityTypeShape EntityType="MsCrmModel.ContactBase" Width="1.5" PointX="31.25" PointY="3.125" />
+        <EntityTypeShape EntityType="MsCrmModel.ContactExtensionBase" Width="1.5" PointX="33.5" PointY="8" />
+        <AssociationConnector Association="MsCrmModel.contact_master_contact" />
+        <AssociationConnector Association="MsCrmModel.FK_ContactExtensionBase_ContactBase" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

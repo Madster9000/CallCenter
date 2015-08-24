@@ -1,0 +1,383 @@
+body,html 
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    font-size: 18px;
+
+    background-color: lavender;
+}
+
+.PageWrapper
+{
+    width: 1000px;
+    height: 100%;
+
+    margin: 0 auto;
+    /*border: 1px solid green;*/
+}
+
+.Header
+{
+    width: 100%;
+    height: 85px;
+
+    background-color:#093d62;
+}
+
+.Content
+{
+    width: 100%;
+    min-height: 600px;
+
+    background-color: white;
+}
+
+.ShadowBase
+{
+    -webkit-box-shadow: 0 0 0px #000000;
+    -ms-box-shadow: 0 0 0px #000000;
+    box-shadow: 2px 2px 2px #555555;
+    /*box-shadow: 0 0 10px rgba(0,0,0,0.5);*/
+}
+
+.HasHint
+{
+    position: relative;
+}
+.HasHint:hover::after
+{
+    content: attr(data-title);
+
+    display: block;
+    position: absolute;
+
+    width: 200px;
+    height: 30px;
+    left: -85px; bottom: -45px; 
+
+    z-index: 1;
+
+    background: #3498db;
+    background: rgba(82,182,249,0.9);
+
+    font-size: 12px;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+
+    padding: 5px 5px 5px 5px;
+}
+
+.clearfix:after {
+	content: " ";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+.CallBlock_Wrapper_Base
+{
+    width: 80%;
+    height: 60px;
+    float: left;
+
+    color: white;
+
+    margin: 10px 5px 5px 15px;
+    
+}
+
+    .CallBlock_Wrapper_Incoming
+    {
+        background-color: #aaaaaa;
+    }
+    .CallBlock_Wrapper_Joined
+    {
+        background-color: #34495e;
+    }
+    .CallBlock_Wrapper_Missed
+    {
+        background-color: #e74c3c;
+    }
+    .CallBlock_Wrapper_Received
+    {
+        background-color: #3498db;
+    }
+    .CallBlock_Wrapper_Ended
+    {
+        background-color: #1abc9c;
+    }
+
+    .CallBlock_Info_Base
+    {
+        width: 30%;
+        float: left;
+        margin: 5px;
+    }
+    .CallBlock_ReceivedBy_Base
+    {
+        font-size: 25px;
+        line-height: 55px;
+    }
+    
+.CallBlock_ButtonContaner_Base 
+{
+    width: 35px;
+    height: 35px;
+    float: left;
+
+    margin: 20px 5px 5px 5px;
+    padding: 2px;
+
+    background-color: #e8e8e8;
+    
+    cursor: pointer;
+}
+
+.CallBlock_ButtonContaner_Base:active
+{
+    position: relative;
+    top: 1px;
+    left: 1px;
+}
+
+.CallBlock_ButtonContaner_Base img
+{
+    width: 100%;
+    height: 100%;
+}
+.ContactsBlock_Contaner_Base
+{
+    margin: 5px;
+
+    height: 300px;
+}
+    .ContactsBlock_Wrapper_Base
+    {
+        display: block;
+        width: 95%;
+        border: 1px solid #aaaaaa;
+        background-color:  #3498db;
+        color: white;
+
+        margin: 3px;
+        padding: 3px;
+        cursor: pointer;
+
+        height: 30px;
+        line-height: 30px;
+    }
+    .ContactBlock_Pages_Base
+    {
+        text-align: center;
+    }
+        .ContactBlock_Pages_Base img
+        {
+            width: 25px;
+            height: 25px;
+            margin: 5px;
+            cursor: pointer;
+        }
+.FormBlock_Form_Base
+{
+    margin: 5px 5px 5px 5px;
+}
+    .FormBlock_Button_Base
+    {
+        border: 1px solid #888888;
+        width: 49%;
+        height: 30px;
+        color: white;
+        float: left;
+
+        margin: 10px 0px 10px 0;
+
+        cursor: pointer;
+    }
+        .FormBlock_Button_Small
+        {
+            width: 29%;
+        }
+        .FormBlock_Button_Green
+        {
+            background-color: #1abc9c;
+            margin-right: 5px
+        }
+        .FormBlock_Button_Blue
+        {
+            background-color: #34495e;
+        }
+        .FormBlock_Button_Base:last-of-type
+        {
+            float: right;
+        }
+        .FormBlock_Button_Small:last-of-type
+        {
+            margin-right: 0;
+        }
+
+    .FormBlock_Field_Base
+    {
+        color: #555555;
+        margin: 5px 0px 5px 0px;
+    }
+        .FormBlock_Field_Base label
+        {
+            display: block;
+        }
+        .FormBlock_Field_Base input[type=text]
+        {
+            border: 1px solid #888888;
+            color: #555555;
+            width: 99%;
+            height: 20px;
+
+            padding: 2px;
+        }
+        .FormBlock_Field_Base textarea
+        {
+            -moz-resize: none;
+            -ms-resize: none;
+            -o-resize: none;
+            resize: none;
+
+            border: 1px solid #888888;
+            color: #555555;
+            width: 99%;
+            height: 100px;
+
+            padding: 2px;
+        }
+        .FormBlock_Field_Base select
+        {
+            border: 1px solid #888888;
+            color: #555555;
+            width: 100%;
+            height: 25px;
+
+            padding: 2px;
+        }
+.HeaderBlock_Wrapper_Base
+{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+    .HeaderBlock_Logo_Base
+    {
+        float: left;
+        width: 50px;
+        height: 50px;
+
+        margin: 0px 0px 0px 10px;
+    }
+    .HeaderBlock_Title_Base
+    {
+        line-height: 50px;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+    }
+.ModalBlock_Wrapper_Base
+{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    background: #52b6f9;
+    background: rgba(82,182,249,0.5);
+}
+
+.ModalBlock_Content_Base
+{
+    display: block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+
+    background-color: #efefef;
+
+    width: 600px;
+
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.ModalBlock_ContentHeader_Base
+{
+    width: 100%;
+    height: 30px;
+
+    line-height: 30px;
+
+    text-align: center;
+    color: #eeeeee;
+
+    background-color: #34495e
+}
+    .ModalBlock_ContentHeader_Base span
+    {
+        margin-left: -25px;
+        cursor: default;
+    }
+    .ModalBlock_ContentHeader_Base img
+    {
+        float: left;
+        width: 25px;
+        height: 25px;
+
+        margin: 2px 2px 2px 5px;
+    }
+.NavigationBlock_Wrapper_Base
+{
+    height: 28px;
+    width: 100%;
+}
+    .NavigationBlock_Link_Base
+    {
+        display: inline-block;
+
+        -moz-min-width: 150px;
+        -ms-min-width: 150px;
+        -o-min-width: 150px;
+        -webkit-min-width: 150px;
+        min-width: 150px;
+
+        height: 100%;
+
+        color: white;
+
+        text-decoration: none;
+        text-align: center;
+
+        padding: 2px 2px 0px 2px;
+        margin: 5px 0 0 0;
+    }
+
+    .NavigationBlock_Link_Base:hover
+    {
+        color: white;
+        background-color: #0A92F9;
+
+    }
+    .NavigationBlock_Link_Selected
+    {
+        background-color: white;
+        color: #555555;
+    }
+        .NavigationBlock_Link_Selected:hover
+        {
+            background-color: white;
+            color: #555555;
+        }

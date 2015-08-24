@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="callCenterApplication">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Колл центр</title>
+
+    <link rel="icon" type="image/png" href="Images/favicon.png"/>
+
+    <link href="FrontendBuild/styles.css" rel="stylesheet"/>
+
+    <script src="Scripts/jquery-2.1.3.js"></script>
+    <script src="Scripts/jquery.signalR-2.2.0.js"></script>
+
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+
+    <script src="FrontendBuild/services.js"></script>
+    <script src="FrontendBuild/filters.js"></script>
+    <script src="FrontendBuild/direcives.js"></script>
+    <script src="FrontendBuild/controllers.js"></script>
+
+    <script src="FrontendBuild/modules.js"></script>
+    <script src="FrontendBuild/application.js"></script>
+
+</head>
+<body data-ng-controller="MasterPageCtrl">
+    <div class="PageWrapper">
+        <div class="Header">
+            <div class="HeaderBlock_Wrapper_Base">
+                <img class="HeaderBlock_Logo_Base" src="Images/logo.png" alt=""/>
+                <span class="HeaderBlock_Title_Base">КОЛЛ ЦЕНТР</span>
+            </div>
+
+            <div class="NavigationBlock_Wrapper_Base">
+                <a href="#/incoming"
+                   data-ng-class="{NavigationBlock_Link_Selected:isCurrent('/incoming')}"
+                   class="NavigationBlock_Link_Base">
+                    Текущие
+                </a>
+                <a href="#/missed"
+                   data-ng-class="{NavigationBlock_Link_Selected:isCurrent('/missed')}"
+                   class="NavigationBlock_Link_Base">
+                    Пропущенные ({{Calls.MissedCalls.length}})
+                </a>
+                <a href="#/received"
+                   data-ng-class="{NavigationBlock_Link_Selected:isCurrent('/received')}"
+                   class="NavigationBlock_Link_Base">
+                    Принятые
+                </a>
+            </div>
+        </div>
+
+        <!--<div data-st-incident-button></div>-->
+
+        <div class="Content clearfix">
+            <div data-st-callaction-form=""></div>
+            <div data-st-incident-form=""></div>
+            <div data-st-addcontact-form=""></div>
+
+            <div data-ng-view=""></div>
+        </div>
+
+        <div class="Footer">
+
+        </div>
+    </div>
+</body>
+</html>

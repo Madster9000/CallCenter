@@ -1,0 +1,46 @@
+﻿<div data-ng-repeat="call in CallsService.MissedCalls">
+
+    <div class="CallBlock_Wrapper_Base ShadowBase"
+         data-ng-class="call | CallStyleFlt">
+
+        <div style="float: right; color: white; margin: 5px; font-size: 12px;" data-ng-bind="call.StateDescription"></div>
+
+        <div class="CallBlock_Info_Base">
+            <div class="CallBlock_Phone_Base" data-ng-bind="call.PhoneNumber"></div>
+            <div style="height: 30px; line-height: 30px;">
+                <div class="HasHint"
+                     style="width: 25px; height: 25px;cursor: pointer; display: inline-block; vertical-align: middle"
+                     data-ng-hide="call.IsOrganizationExists"
+                     data-title="Организация не найдена.">
+                    <img style="width: 25px; height: 25px;" src="/Images/ic_error_white_36dp.png" alt="" />
+                </div>
+                <div style="width: 25px; height: 25px;cursor: pointer; display: inline-block; vertical-align: middle"
+                     class="HasHint"
+                     data-title="Карточка клиента не найдена."
+                     data-ng-hide="call.IsClientCardExists">
+                    <img style="width: 25px; height: 25px;" src="/Images/ic_error_white_36dp.png" alt="" />
+                </div>
+                <a class="CallBlock_Client_Base" style="color: white; line-height: 30px; vertical-align: middle" data-ng-bind="call.CrmInfo.FullName" data-ng-href="{{call.ContactLink}}" target="_blank"></a>
+            </div>
+        </div>
+
+        <div class="CallBlock_Info_Base">
+            <div class="CallBlock_StartTime_Base" data-ng-bind="call.StartDate | date: 'HH:mm:ss'"></div>
+            <div class="CallBlock_Duration_Base" data-ng-bind="call.Duration | date: 'mm:ss'"></div>
+        </div>
+
+        <div class="CallBlock_ReceivedBy_Base" data-ng-bind="call.Receiver"></div>
+
+        <div class="CallBlock_ReceivedBy_Base" data-ng-bind="call.QueueWaitTime | date: 'mm:ss'"></div>
+
+
+    </div>
+
+    <div data-st-called-back-button data-st-call-model="call"></div>
+    <div data-st-incident-button=""
+         data-st-call-model="call"
+         data-ng-show="call.IsInfoLoaded && call.IsContactFound && call.IsClientCardExists && call.IsOrganizationExists"></div>
+    <div data-st-addcontact-button data-st-call-model="call" data-ng-show="call.IsInfoLoaded && !call.IsContactFound"></div>
+    <div data-st-callaction-button data-st-call-model="call"></div>
+
+</div>

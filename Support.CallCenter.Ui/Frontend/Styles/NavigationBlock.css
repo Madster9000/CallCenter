@@ -1,0 +1,43 @@
+﻿.NavigationBlock_Wrapper_Base
+{
+    height: 28px;
+    width: 100%;
+}
+    .NavigationBlock_Link_Base
+    {
+        display: inline-block;
+
+        -moz-min-width: 150px;
+        -ms-min-width: 150px;
+        -o-min-width: 150px;
+        -webkit-min-width: 150px;
+        min-width: 150px;
+
+        height: 100%;
+
+        color: white;
+
+        text-decoration: none;
+        text-align: center;
+
+        padding: 2px 2px 0px 2px;
+        margin: 5px 0 0 0;
+    }
+
+    .NavigationBlock_Link_Base:hover
+    {
+        color: white;
+        background-color: #0A92F9;
+
+    }
+    .NavigationBlock_Link_Selected
+    {
+        background-color: white;
+        color: #555555;
+    }
+        .NavigationBlock_Link_Selected:hover
+        {
+            background-color: white;
+            color: #555555;
+        }
+

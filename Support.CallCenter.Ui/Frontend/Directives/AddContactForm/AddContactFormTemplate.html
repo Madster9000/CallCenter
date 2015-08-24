@@ -1,0 +1,46 @@
+﻿<div class="ModalBlock_Wrapper_Base" data-ng-show="AddContactFormModal.IsVisible">
+    <div class="ModalBlock_Content_Base">
+        <div class="ModalBlock_ContentHeader_Base">
+            <img src="/Images/ic_group_add_white_48dp.png" alt=""/>
+            <span>Поиск контакта для текущего звонка</span>
+        </div>
+        <form class="FormBlock_Form_Base clearfix">
+
+            <div class="FormBlock_Field_Base">
+                <label for="ContactRouteNumber">Номер Маршрута:</label>
+                <input id="ContactRouteNumber" type="text" data-ng-model="AddContactFormViewModel.RouteNumber" />
+            </div>
+            <div class="FormBlock_Field_Base">
+                <label for="ContactFirstName">Имя:</label>
+                <input id="ContactFirstName" type="text" data-ng-model="AddContactFormViewModel.FirstName"/>
+            </div>
+            <div class="FormBlock_Field_Base">
+                <label for="ContactLastName">Фамилия:</label>
+                <input id="ContactLastName" type="text" data-ng-model="AddContactFormViewModel.LastName"/>
+            </div>
+
+            <fieldset class="ContactsBlock_Contaner_Base">
+                <legend>Найденные маршруты</legend>
+                <div class="ContactBlock_Pages_Base clearfix">
+                    <img src="/Images/ic_arrow_back_grey600_48dp.png" alt="" data-ng-click="AddContactFormEvents.PreviousPageClicked()" style="float: left"/>
+                    <span data-ng-bind="AddContactFormViewModel.CurrentPage"></span>
+                    <span>/</span>
+                    <span data-ng-bind="AddContactFormViewModel.TotalPages"></span>
+                    <img src="/Images/ic_arrow_forward_grey600_48dp.png" alt="" data-ng-click="AddContactFormEvents.NextPageClicked()" style="float: right" />
+                </div>
+                <label class="ContactsBlock_Wrapper_Base"
+                       data-ng-repeat="contact in FoundContacts
+                       | ArrayOffsetFlt: AddContactFormViewModel.CurrentPage*AddContactFormViewModel.ItemsOnPage
+                       | limitTo:6">
+                    <input type="radio" data-ng-model="AddContactFormViewModel.SelectedContact" data-ng-value="contact" />
+                    <span data-ng-bind="contact.FullName"></span>
+                </label>
+            </fieldset>
+
+            <input class="FormBlock_Button_Base FormBlock_Button_Green FormBlock_Button_Small" type="submit" value="Найти" data-ng-click="AddContactFormEvents.FindButtonClicked()" />
+            <input class="FormBlock_Button_Base FormBlock_Button_Green FormBlock_Button_Small" type="submit" value="Сохранить" data-ng-click="AddContactFormEvents.SaveButtonClicked()" />
+            <input class="FormBlock_Button_Base FormBlock_Button_Blue FormBlock_Button_Small" type="button" value="Отмена" data-ng-click="AddContactFormModal.Hide()" />
+
+        </form>
+    </div>
+</div>
